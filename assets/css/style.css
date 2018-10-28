@@ -1,0 +1,29 @@
+.buttons {
+    color: white;
+    background-color: black;
+}
+
+body {
+    background-color: grey;
+}
+
+#topRow {
+    background-color: white;
+}
+
+#buttonDiv {
+    margin: 10px 0px 10px 0px;
+}
+
+.sizeBox {
+    width: 300px;
+    margin: 20px 0 0 0;
+}
+
+.play-gif {
+    display: none;
+}
+
+.metaStyle {
+    color: white;
+}
