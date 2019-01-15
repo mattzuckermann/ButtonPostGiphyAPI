@@ -32,6 +32,7 @@ function runArray() {
                 method: "GET"
             })
                 .then(function (response) {
+                    var resultsArr = [];
                     var results = response.data;
                     console.log(response);
 
@@ -41,6 +42,13 @@ function runArray() {
                         var ratingText = results[j].rating.toUpperCase();
                         var titleText = results[j].title;
                         var sourceText = results[j].source;
+
+                        let resultObj = {
+                            stillImage: stillGifUrl,
+                            playImage: playGifUrl,
+                        }
+
+                        resultsArr.push(resultObj);
 
                         var searchImage = $("<img>");
                         var ratingDiv = $("<div>");
@@ -64,23 +72,16 @@ function runArray() {
                         $("#giphyDiv").append(ratingDiv);
                         $("#giphyDiv").append(titleDiv);
                         $("#giphyDiv").append(sourceDiv);
-
-                        $("#gif-" + j).on("click", function () {
-                            if ($(this).attr("src") === stillGifUrl) {
-                                searchImage.attr("src", playGifUrl);
-                                $("#giphyDiv").append(searchImage);
-                                $("#giphyDiv").append(ratingDiv);
-                                $("#giphyDiv").append(titleDiv);
-                                $("#giphyDiv").append(sourceDiv);
-                            } else if ($(this).attr("src") === playGifUrl) {
-                                searchImage.attr("src", stillGifUrl);
-                                $("#giphyDiv").append(searchImage);
-                                $("#giphyDiv").append(ratingDiv);
-                                $("#giphyDiv").append(titleDiv);
-                                $("#giphyDiv").append(sourceDiv);
-                            }
-                        });
                     }
+                    $(".sizeBox").on("click", function () {
+                        for (let k = 0; k < results.length; k++) {
+                            if ($(this).attr("src") === resultsArr[k].stillImage) {
+                                $(this).attr("src", resultsArr[k].playImage);
+                            } else if ($(this).attr("src") === resultsArr[k].playImage) {
+                                $(this).attr("src", resultsArr[k].stillImage);
+                            }
+                        }
+                    })
                 });
         });
     };
