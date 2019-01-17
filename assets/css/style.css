@@ -1,14 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
 .buttons {
     color: white;
-    background-color: black;
+    background-color: blue;
+    border-radius: 7%;
+    padding: 3px;
+    margin: 2px;
+    font-family: 'Fjalla One', sans-serif;
 }
 
 body {
-    background-color: grey;
+    background-color: darkblue;
+}
+
+.container {
+    background-image: url("https://previews.123rf.com/images/apostrophe/apostrophe1411/apostrophe141100013/33175538-abstract-paper-geometric-shapes-background-texture.jpg");
+    position: relative;
+    height: 100%;
+}
+
+#buttonMakerTitle {
+    color: white;
+    font-family: helvetica;
+    margin-top: 4px;
 }
 
 #topRow {
-    background-color: white;
+    background: rgba(95,158,200,0.6);
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 #buttonDiv {
@@ -16,8 +40,9 @@ body {
 }
 
 .sizeBox {
+    height: 300px;
     width: 300px;
-    margin: 20px 0 0 0;
+    margin: 20px 20px 0px 0px;
 }
 
 .play-gif {
@@ -25,5 +50,5 @@ body {
 }
 
 .metaStyle {
-    color: white;
+    color: skyblue;
 }

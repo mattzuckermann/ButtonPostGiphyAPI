@@ -2,7 +2,7 @@
 //VARIABLES
 //=========
 
-var topics = ["tyler the creator", "frank ocean", "syd", "earl sweatshirt", "left brain", "odd future", "jasper (odd future)", "loiter squad"];
+var topics = ["tyler the creator", "frank ocean", "syd", "earl sweatshirt", "left brain", "odd future", "jasper (odd future)", "loiter squad", "vince staples", "kendrick lamar", "Anderson .Paak", "Tribe Called Quest"];
 
 //=========
 //FUNCTIONS
@@ -25,7 +25,7 @@ function runArray() {
             $("#giphyDiv").text("");
             var searchItemValue = ($(this).attr("data-name"));
             var APIKey = "UJb4yclxRCV4jN9tvnq0f0ONJ4JYKWXK"
-            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchItemValue + "&limit=10&api_key=" + APIKey;
+            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchItemValue + "&limit=21&api_key=" + APIKey;
 
             $.ajax({
                 url: queryURL,
@@ -51,27 +51,27 @@ function runArray() {
                         resultsArr.push(resultObj);
 
                         var searchImage = $("<img>");
-                        var ratingDiv = $("<div>");
-                        var titleDiv = $("<div>");
-                        var sourceDiv = $("<div>");
+                        // var ratingDiv = $("<div>");
+                        // var titleDiv = $("<div>");
+                        // var sourceDiv = $("<div>");
 
 
-                        $(ratingDiv).text("Rating: " + ratingText);
-                        $(titleDiv).text("Title: " + titleText);
-                        $(sourceDiv).text("Source: " + sourceText);
+                        // $(ratingDiv).text("Rating: " + ratingText);
+                        // $(titleDiv).text("Title: " + titleText);
+                        // $(sourceDiv).text("Source: " + sourceText);
 
                         searchImage.attr("src", stillGifUrl);
                         searchImage.attr("class", "sizeBox");
                         searchImage.attr("alt", results[j].title);
                         searchImage.attr("id", "gif-" + j);
-                        ratingDiv.attr("class", "metaStyle");
-                        titleDiv.attr("class", "metaStyle");
-                        sourceDiv.attr("class", "metaStyle");
+                        // ratingDiv.attr("class", "metaStyle");
+                        // titleDiv.attr("class", "metaStyle");
+                        // sourceDiv.attr("class", "metaStyle");
 
                         $("#giphyDiv").append(searchImage);
-                        $("#giphyDiv").append(ratingDiv);
-                        $("#giphyDiv").append(titleDiv);
-                        $("#giphyDiv").append(sourceDiv);
+                        // $("#giphyDiv").append(ratingDiv);
+                        // $("#giphyDiv").append(titleDiv);
+                        // $("#giphyDiv").append(sourceDiv);
                     }
                     $(".sizeBox").on("click", function () {
                         for (let k = 0; k < results.length; k++) {
