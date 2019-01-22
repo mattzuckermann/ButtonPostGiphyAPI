@@ -18,6 +18,7 @@ function runArray() {
         createdElement.attr("data-name", topics[i]);
         createdElement.attr("class", "buttons")
         createdElement.text(topics[i]);
+        console.log(createdElement);
         $("#buttonDiv").append(createdElement);
 
         //using for loop to allow click event for any button from array to search for gifs with button's "data name"
