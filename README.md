@@ -10,9 +10,9 @@ This app provides a quick way to create your own buttons with data-text of your 
 
 ### GIF Demonstration of App:
 
-![Gif Demonstration of App](https://media.giphy.com/media/2yzEP8yRUe8sQO80GE/giphy.gif)
+![Gif Demonstration of App](https://media.giphy.com/media/9VlRuxBHWwpUYhGip1/giphy.gif)
 
-<img src="https://media.giphy.com/media/2UoIy6K6srHakwYiN7/giphy.gif" alt="Gif Demonstration of App" width=100%>
+<img src="https://media.giphy.com/media/9VlRuxBHWwpUYhGip1/giphy.gif" alt="Gif Demonstration of App" width=100%>
 
 ---
 
